@@ -7,21 +7,18 @@
   <title>OkhttpExample | Gitblog-阿春halu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="–2016-05-06 –OkHttp v2.4-&amp;gt;初次使用
-菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。莫要全抄，毕竟内网地址。 
-主要内容OkHttpUtilsOkHttpUtils 是我自己为了代码好整理写的一个类，跟鸿洋大大的并不是一个东西，也不是他那个级别的东西。就写了get和p">
+菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。莫要全抄，毕竟内网地址。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OkhttpExample">
 <meta property="og:url" content="http://yoursite.com/2016/05/06/OkHttpExample/index.html">
 <meta property="og:site_name" content="Gitblog-阿春halu">
 <meta property="og:description" content="–2016-05-06 –OkHttp v2.4-&amp;gt;初次使用
-菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。莫要全抄，毕竟内网地址。 
-主要内容OkHttpUtilsOkHttpUtils 是我自己为了代码好整理写的一个类，跟鸿洋大大的并不是一个东西，也不是他那个级别的东西。就写了get和p">
-<meta property="og:updated_time" content="2016-05-11T05:24:58.000Z">
+菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。莫要全抄，毕竟内网地址。">
+<meta property="og:updated_time" content="2016-06-04T14:23:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OkhttpExample">
 <meta name="twitter:description" content="–2016-05-06 –OkHttp v2.4-&amp;gt;初次使用
-菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。莫要全抄，毕竟内网地址。 
-主要内容OkHttpUtilsOkHttpUtils 是我自己为了代码好整理写的一个类，跟鸿洋大大的并不是一个东西，也不是他那个级别的东西。就写了get和p">
+菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。莫要全抄，毕竟内网地址。">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -114,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/后台/" style="font-size: 10px;">后台</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a> <a href="/tags/微信支付/" style="font-size: 10px;">微信支付</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -218,7 +215,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>–2016-05-06 –<br>OkHttp v2.4-&gt;初次使用</p>
-<p>菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。<br>莫要全抄，毕竟内网地址。 </p>
+<p>菜鸟第一次试玩OkHttp_v2.4，就只是试了一下post和get两种，而且只是基本的传几个参数。里面的网址连接只是我本地Tomcat上的小网站。<br>莫要全抄，毕竟内网地址。<a id="more"></a></p>
 <h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><h3 id="OkHttpUtils"><a href="#OkHttpUtils" class="headerlink" title="OkHttpUtils"></a>OkHttpUtils</h3><p>OkHttpUtils 是我自己为了代码好整理写的一个类，跟<a href="http://blog.csdn.net/lmj623565791/article/details/47911083" target="_blank" rel="external">鸿洋大大</a>的并不是一个东西，也不是他那个级别的东西。<br>就写了get和post两个方法。（链接还有OkHttp的使用都写在里面了）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class OkHttpUtils &#123;</span><br><span class="line"></span><br><span class="line">    private static final String tag = OkHttpUtils.class.getName();</span><br><span class="line"></span><br><span class="line">    public static void <span class="function"><span class="title">get</span></span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    public static void <span class="function"><span class="title">post</span></span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>具体看代码…不多说</p>
@@ -236,6 +233,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/06/01/后台实现微信支付相关功能(WXPayDemo)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          后台实现微信支付相关功能(WXPayDemo)
+        
+      </div>
+    </a>
   
   
     <a href="/2016/04/28/ReLearning Android/" id="article-nav-older" class="article-nav-link-wrap">
