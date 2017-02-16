@@ -3,23 +3,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <script>
 function searchFiles(){
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var f = fso.GetFolder(document.all.fixfolder.value);
-var fc = new Enumerator(f.files);
-var s = "";
-for (; !fc.atEnd(); fc.moveNext())
-{
-s += fc.item();
-s += "<br/>";
-}
-fk = new Enumerator(f.SubFolders);
-for (; !fk.atEnd(); fk.moveNext())
-{
-s += fk.item();
-s += "<br/>";
-}
+// var fso = new ActiveXObject("Scripting.FileSystemObject");
+// var f = fso.GetFolder(document.all.fixfolder.value);
+// var fc = new Enumerator(f.files);
+// var s = "";
+// for (; !fc.atEnd(); fc.moveNext())
+// {
+// s += fc.item();
+// s += "<br/>";
+// }
+// fk = new Enumerator(f.SubFolders);
+// for (; !fk.atEnd(); fk.moveNext())
+// {
+// s += fk.item();
+// s += "<br/>";
+// }
 
-textarea.innerHTML = s
+// textarea.innerHTML = s
+  var js=document.scripts;
+var jsPath;
+for(var i=js.length;i>0;i--){
+ if(js[i-1].src.indexOf("test.js")>-1){
+   jsPath=js[i-1].src.substring(0,js[i-1].src.lastIndexOf("/")+1);
+ }
+}
+alert(jsPath);
 }
 </script>
 </head>
