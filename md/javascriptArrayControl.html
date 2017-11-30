@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gitblog-阿春halu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gitblog-阿春halu">
+  <meta property="og:url" content="http://yoursite.com/index.html">
+  <meta property="og:site_name" content="Gitblog-阿春halu">
+  <meta property="og:description">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Gitblog-阿春halu">
+  <meta name="twitter:description">
+  <link rel="icon" href="../img/favicon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="../js/markdown.js"></script>
+</head>
+<xmp theme="united" style="display:none;">
+  **数组的创建**
+> JS的数组长度都是变长的
 
+``` javascript
+var arrayObj = new Array();　//创建一个数组
+var arrayObj = new Array([size]);　//创建一个数组并指定长度，注意不是上限，是长度
+var arrayObj = new Array([element0[, element1[, ...[, elementN]]]]);　//创建一个数组并赋值
+```
+**数组的元素的访问**
+> 与java的一样，利用下标，赋值也一样
+
+**数组元素的添加**
+``` javascript
+arrayObj. push([item1 [item2 [. . . [itemN ]]]]);
+// 将一个或多个新元素添加到数组结尾，并返回数组新长度
+
+arrayObj.unshift([item1 [item2 [. . . [itemN ]]]]);
+// 将一个或多个新元素添加到数组开始，数组中的元素自动后移，返回数组新长度
+
+arrayObj.splice(insertPos,0,[item1[, item2[, . . . [,itemN]]]]);
+//将一个或多个新元素插入到数组的指定位置，插入位置的元素自动后移，返回""。
+```
+
+**数组元素的删除**
+``` javascript
+arrayObj.pop(); //移除最后一个元素并返回该元素值
+arrayObj.shift(); //移除最前一个元素并返回该元素值，数组中元素自动前移
+arrayObj.splice(deletePos,deleteCount); 
+//删除从指定位置deletePos开始的指定数量deleteCount的元素，数组形式返回所移除的元素
+```
+**数组的截取和合并**
+``` javascript
+arrayObj.slice(start, [end]); 
+//以数组的形式返回数组的一部分，注意不包括 end 对应的元素，如果省略 end 将复制 start 之后的所有元素
+arrayObj.concat([item1[, item2[, . . . [,itemN]]]]); 
+//将多个数组（也可以是字符串，或者是数组和字符串的混合）连接为一个数组，返回连接好的新的数组
+```
+**数组的拷贝**
+``` javascript
+arrayObj.slice(0); //返回数组的拷贝数组，注意是一个新的数组，不是指向
+arrayObj.concat(); //返回数组的拷贝数组，注意是一个新的数组，不是指向
+```
+**数组元素的排序**
+``` javascript
+arrayObj.reverse(); //反转元素（最前的排到最后、最后的排到最前），返回数组地址
+arrayObj.sort(); //对数组元素排序，返回数组地址
+```
+**数组元素的字符串化**
+> toLocaleString 、toString 、valueOf：可以看作是join的特殊用法，不常用
+
+``` javascript
+arrayObj.join(separator); 
+//返回字符串，这个字符串将数组的每一个元素值连接在一起，中间用 separator 隔开。
+```
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
